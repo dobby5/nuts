@@ -16,15 +16,16 @@
     "github-webhook-handler": "0.6.0",
     "lodash": "^4.17.15",
     "lru-diskcache": "1.1.1",
-    "octocat": "0.12.1",
+    "octocat": "1.0.0",
     "q": "1.5.0",
-    "request": "2.81.0",
+    "request": "2.82.0",
     "semver": "7.3.2",
     "stream-res": "1.0.1",
     "strip-bom": "4.0.0",
     "understudy": "4.1.0",
     "urljoin.js": "0.1.0",
-    "uuid": "8.0.0"
+    "uuid": "8.0.0",
+    "snyk": "^1.319.2"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
@@ -44,10 +45,13 @@
   "scripts": {
     "start": "node bin/web.js",
     "lint:check": "eslint --ext .js .",
-    "lint:fix": "eslint --ext .js --fix ."
+    "lint:fix": "eslint --ext .js --fix .",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "directories": {
     "lib": "lib"
   },
-  "keywords": []
+  "keywords": [],
+  "snyk": true
 }
